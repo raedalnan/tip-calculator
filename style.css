@@ -50,7 +50,7 @@ body{
    background-color: var(--Very-light-grayish-cyan);
    border: none;
    border-radius: .5rem;
-   padding-top: 1.5rem;
+   height: 3rem;
    margin-bottom: 3rem;
    text-align: end;
    font-family: 'Courier New', Courier, monospace;
@@ -142,4 +142,19 @@ body{
 }
 .reset:hover{
     background-color: var(--Light-grayish-cyan);
+}
+
+@media only screen and (max-width: 900px) {
+    .calculator{
+        flex-direction: column;
+        height: auto;
+        width: auto;
+    }
+    .left{
+        width: 100%;
+    }
+    .right{
+        width: 100%;
+        margin: auto;
+    }
 }

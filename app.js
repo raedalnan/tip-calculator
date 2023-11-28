@@ -31,15 +31,14 @@ people.addEventListener("input" , () => {
 })
 reset.addEventListener("click" , () => Reset())
 
-Reset()
 
 function calc(){
-    if(billv && peoplev != null ){
+    if(billv && peoplev && percentage != null ){
         tipAmount = (billv * percentage) / peoplev 
         totalAmount = (billv/peoplev) + tipAmount
     
-        tipAmountE.innerHTML = tipAmount
-        totalAmountE.innerHTML = totalAmount
+        tipAmountE.innerHTML = tipAmount.toFixed(2)
+        totalAmountE.innerHTML = totalAmount.toFixed(2)
     }
    
 }
@@ -70,8 +69,8 @@ function Percentage(tip){
 function Reset(){
     tipAmountE.innerHTML = "0.00"
     totalAmountE.innerHTML = "0.00"
-    bill.value = 0
-    people.value = 0 
+    bill.value = ""
+    people.value = ""
 }
 
 
