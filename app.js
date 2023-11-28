@@ -19,6 +19,13 @@ btns.forEach(btn =>{
         Percentage(tipp)
         calc()
     })
+    btn.addEventListener('input' , () => {
+        btns.forEach(b => b.classList.remove("active"))
+        btn.classList.add("active")
+        tipp = btn.value
+        Percentage(tipp)
+        calc()
+    })
 })
 
 bill.addEventListener("input" , () => {
