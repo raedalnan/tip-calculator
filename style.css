@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+
+:root{
+    --Strong-cyan: hsl(172, 67%, 45%);
+
+    --Very-dark-cyan: hsl(183, 100%, 15%);
+    --Dark-grayish-cyan: hsl(186, 14%, 43%);
+    --Grayish-cyan: hsl(184, 14%, 56%);
+    --Light-grayish-cyan: hsl(185, 41%, 84%);
+    --Very-light-grayish-cyan: hsl(189, 41%, 97%);
+    --White: hsl(0, 0%, 100%);
+
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Space Mono', monospace;
+    background-color: var(--Light-grayish-cyan);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.logo{
+    margin: 1rem;
+}
+.calculator{
+    background-color: var(--White);
+    display: flex;
+    padding: 2rem;
+    width: 55%;
+    height: 58vh;
+    border-radius: 1rem;
+}
+.label{
+    color: var(--Grayish-cyan);
+    display: block;
+    margin-bottom: 5px;
+}
+.bill-input{
+   display: block;
+   width: 100%;
+   background-image: url("images/icon-dollar.svg");
+   background-repeat: no-repeat;
+   background-position: 3% 50% ;
+   background-color: var(--Very-light-grayish-cyan);
+   border: none;
+   border-radius: .5rem;
+   padding-top: 1.5rem;
+   margin-bottom: 3rem;
+   text-align: end;
+   font-family: 'Courier New', Courier, monospace;
+   font-weight: 700;
+   font-size: 1.1rem;
+}
+.bill-input::placeholder{
+    color: var(--Very-light-grayish-cyan);
+    text-align: end;
+}
+.bill-input:focus{
+    outline: none;
+    text-align: end;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 700;
+    color: var(--Very-dark-cyan);
+}
+.left{
+    width: 50%;
+}
+.btns{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-rows: 1fr 1fr ;
+    gap: 1rem;
+    margin: 1rem 0;
+
+}
+.btn{
+    background-color: var(--Very-dark-cyan);
+    text-align: center;
+    color: var(--Very-light-grayish-cyan);
+    font-size: 1.2rem;
+    border-radius: .3rem;
+    padding: .5rem;
+}
+.btn:hover{
+    background-color: var(--Light-grayish-cyan);
+    color: var(--Very-dark-cyan);
+}
+.custom{
+    background-color: var(--Very-light-grayish-cyan);
+}
+.custom input{
+    border: none;
+    font-size: inherit;
+    font-weight: 700;
+    color: var(--Very-dark-cyan);
+    width: 100%;
+    background-color: inherit;
+}
+.custom:focus{
+    outline: none;
+}
+.active{
+    background-color: var(--Strong-cyan);
+    color: var(--Very-dark-cyan);
+}
+.right{
+    background-color: var(--Very-dark-cyan);
+    width: 50%;
+    margin-left: 1rem;
+    padding: 1.5rem;
+    border-radius: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.tip-amount , .total-amount{
+    color: var(--White);
+    display: flex;
+    justify-content: space-between;
+}
+.tip-amount h1 , .total-amount h1{
+    color: var(--Strong-cyan);
+    font-weight: 700;
+}
+.tip-amount span , .total-amount span{
+    color: var(--Grayish-cyan);
+    
+}
+.reset{
+    width: 100%;
+    background-color: var(--Strong-cyan);
+    color: var(--Very-dark-cyan);
+    text-align: center;
+    padding: .5rem 0 ;
+    border-radius: .2rem;
+}
+.reset:hover{
+    background-color: var(--Light-grayish-cyan);
+}
